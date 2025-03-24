@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<DataContext>(option => 
     {
-        option.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoLocal"));
+        option.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoSomee"));
     }
 );
 
