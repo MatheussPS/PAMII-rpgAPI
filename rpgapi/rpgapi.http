@@ -1,6 +1,6 @@
-@rpgapi_HostAddress = http://localhost:5232
+@RpgApi_HostAddress = http://localhost:5262
 
-GET {{rpgapi_HostAddress}}/weatherforecast/
+GET {{RpgApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
