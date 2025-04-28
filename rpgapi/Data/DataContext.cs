@@ -19,14 +19,16 @@ namespace RpgApi.Data
         public DbSet<Usuario> TB_USUARIOS { get; set; }
         public DbSet<Habilidade> TB_HABILIDADES {get; set;}
         public DbSet<PersonagemHabilidade> TB_PERSONAGENS_HABILIDADES {get; set;}
+        public DbSet<Disputa> TB_DISPUTAS {get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Personagem>().ToTable("TB_PERSONAGENS");
             modelBuilder.Entity<Arma>().ToTable("TB_ARMAS");
             modelBuilder.Entity<Usuario>().ToTable("TB_USUARIOS");
-             modelBuilder.Entity<Habilidade>().ToTable("TB_HABILIDADES");
+            modelBuilder.Entity<Habilidade>().ToTable("TB_HABILIDADES");
             modelBuilder.Entity<PersonagemHabilidade>().ToTable("TB_PERSONAGENS_HABILIDADES");
+            modelBuilder.Entity<Disputa>().ToTable("TB_DISPUTAS");
 
             modelBuilder.Entity<Usuario>()
                 .HasMany(e => e.Personagens)
@@ -98,6 +100,13 @@ namespace RpgApi.Data
             modelBuilder.Entity<Usuario>().HasData(user);
 
             modelBuilder.Entity<Usuario>().Property(u => u.Perfil).HasDefaultValue("Jogador");
+
+            modelBuilder.Entity<Disputa>().HasKey(d => d.Id);
+
+            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("Dt_Disputa");
+            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("AtacanteId");
+            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("OponenteId");
+            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("Tx_Narracao");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "II8ZQH9fisLtM31BIYfDwusr0kWV8jhsv8f+fRaF1t4=",
-  "Source": "RpgApi",
-  "BasePath": "_content/RpgApi",
+  "Hash": "hApZIOkECOmlhPWe/3FRKEeBT59Y58vzRedMeWcnDZc=",
+  "Source": "rpgapi",
+  "BasePath": "_content/rpgapi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
