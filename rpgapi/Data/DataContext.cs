@@ -104,9 +104,9 @@ namespace RpgApi.Data
             modelBuilder.Entity<Disputa>().HasKey(d => d.Id);
 
             modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("Dt_Disputa");
-            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("AtacanteId");
-            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("OponenteId");
-            modelBuilder.Entity<Disputa>().Property(d => d.DataDisputa).HasColumnName("Tx_Narracao");
+            modelBuilder.Entity<Disputa>().Property(d => d.AtacanteId).HasColumnName("AtacanteId");
+            modelBuilder.Entity<Disputa>().Property(d => d.OponenteId).HasColumnName("OponenteId");
+            modelBuilder.Entity<Disputa>().Property(d => d.Narracao).HasColumnName("Tx_Narracao");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
